@@ -1,0 +1,260 @@
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #263238;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+    width: 100%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+}
+
+.logo {
+    font-size: 30px;
+    color: #087f8c;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #ff9f43;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #263238;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #087f8c;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.40),
+        rgba(0, 0, 0, 0.40)),
+        url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1600')
+        center/cover no-repeat;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-content > p:first-child {
+    color: #ffd166;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content > p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 30px;
+    background: #ff9f43;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #087f8c;
+    transform: translateY(-3px);
+}
+
+/* Destinations Section */
+.destinations {
+    padding: 80px 8%;
+    text-align: center;
+    background: #f7fbfc;
+}
+
+.destinations h2,
+.about h2 {
+    font-size: 34px;
+    color: #087f8c;
+    margin-bottom: 10px;
+}
+
+.destinations > p {
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.destination-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.destination-card h3 {
+    color: #087f8c;
+    font-size: 21px;
+    padding: 18px 20px 5px;
+}
+
+.destination-card p {
+    color: #777;
+    font-size: 14px;
+    padding: 0 20px 22px;
+}
+
+/* About Section */
+.about {
+    padding: 80px 15%;
+    text-align: center;
+    background: white;
+}
+
+.about p {
+    max-width: 750px;
+    margin: 20px auto 0;
+    color: #666;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    background: #123c46;
+    color: white;
+    text-align: center;
+    padding: 45px 15px;
+}
+
+footer h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 8px 0;
+    color: #d4e6e8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+
+    .navbar ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 60px 7%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .destination-container {
+        grid-template-columns: 1fr;
+    }
+
+    .destinations {
+        padding: 60px 7%;
+    }
+
+    .about {
+        padding: 60px 8%;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar ul {
+        gap: 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
